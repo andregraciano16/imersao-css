@@ -216,7 +216,7 @@ a {
   justify-content: center;
   background-color: rgba(255, 255, 255, 1);
   transform: rotateY(180deg);
-  width: 100%;
+  width: 240px;
 }
 
 .portfolio p {
@@ -228,6 +228,41 @@ a {
   font-weight: bold;
 }
 
-.sobre .tecnologias {
-  
+.tecnologias {
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 400px) {
+  .tecnologias {
+    grid-template-columns: repeat(4, 60px);
+  }
+}
+
+@media (min-width: 880px) {
+  .tecnologias {
+    grid-template-columns: repeat(8, 60px);
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.tecnologia {
+  text-align: center;
+}
+
+.img-tecnologias {
+  height: 60px;
+  width: 60px;
+  border: none;
+}
+
+.zoom {
+  transition: transform .4s; /* Animation */
+  width: 80px;
+  height: 80px;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
